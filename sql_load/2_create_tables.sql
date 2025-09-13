@@ -1,4 +1,4 @@
-CREATE TABLE public.company_dim
+CREATE TABLE public.company_dim--creating table for data sources
 (
     company_id INT PRIMARY KEY,
     name TEXT,
@@ -7,14 +7,14 @@ CREATE TABLE public.company_dim
     thumbnail TEXT
 );
 
-CREATE TABLE public.skills_dim
+CREATE TABLE public.skills_dim-- creating a table of listed skills
 (
     skill_id INT PRIMARY KEY,
     skills TEXT,
     type TEXT
 );
 
-CREATE TABLE public.job_postings_fact
+CREATE TABLE public.job_postings_fact --table of posted jobs
 (
     job_id INT PRIMARY KEY,
     company_id INT,
@@ -32,10 +32,11 @@ CREATE TABLE public.job_postings_fact
     salary_rate TEXT,
     salary_year_avg NUMERIC,
     salary_hour_avg NUMERIC,
-    FOREIGN KEY (company_id) REFERENCES public.company_dim (company_id)
+    FOREIGN KEY (company_id) REFERENCES public.company_dim (company_id)--linking table(posted jobs) to table(data sources) via 
+                                                                       --forign key ("company id" from data sources table)
 );
 
-CREATE TABLE public.skills_job_dim
+CREATE TABLE public.skills_job_dim-- creating a table of listed skills
 (
     job_id INT,
     skill_id INT,
