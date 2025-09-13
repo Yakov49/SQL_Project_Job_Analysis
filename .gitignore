@@ -1,0 +1,4 @@
+﻿csv_files/
+*.csv
+.vscode/
+.DS_Store
