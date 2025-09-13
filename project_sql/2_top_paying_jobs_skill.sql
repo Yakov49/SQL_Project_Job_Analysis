@@ -34,7 +34,7 @@ ORDER BY
     salary_year_avg DESC
 
 /*
-I loaded your CSV and analyzed the skills column. Here are the highlights:
+AI has loaded my CSV and analyzed the skills column. Here are the highlights:
 Most-mentioned skills (across the 10 roles): SQL and Python lead, followed by Excel and Tableau. Then Looker, R, SAS, and a few cloud/BI items (e.g., BigQuery, GCP).
 I computed, per skill: total mentions, the % of roles that require it, and (when salary was present) the average salary of roles that list that skill plus a salary premium vs. overall average.
 */
